@@ -169,8 +169,36 @@
   border-color: var(--dl-color-theme-neutral-dark);
   border-width: 0px;
   border-radius: var(--dl-radius-radius-radius4);
-  background-color: rgba(0,0,0,0.5);
+  filter: brightness(25%)
 }
+
+#container {
+  height: 723px;
+  width: 100%;
+  position: relative;
+}
+#image {
+  width: 100%;
+  height: 723px;
+  z-index: 100;
+  object-fit: cover;
+  border-color: var(--dl-color-theme-neutral-dark);
+  border-width: 0px;
+  border-radius: var(--dl-radius-radius-radius4);
+  filter: brightness(25%)
+}
+#text {
+  z-index: 100;
+  position: absolute;
+  color: white;
+  font-size: 96px;
+  font-weight: bold;
+  left: 436px;
+  top: 268px;
+  font-family: "Poppins";
+}
+
+
 .home-text20 {
   color: rgb(0, 0, 0);
   height: auto;
