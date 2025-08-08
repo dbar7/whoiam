@@ -352,3 +352,106 @@ body {
     }
 }
 
+/* --- Friends Grid Section --- */
+.friends-caption {
+    text-align: center;
+    font-size: 1.1em;
+    color: #3e6b56;
+    margin-bottom: 25px;
+}
+
+.friends-carousel {
+    width: 100%;
+    height: auto;
+    /* Increase padding to give arrows more space */
+    padding: 10px 0 50px 0;
+    position: relative; /* Needed for absolute positioning of buttons */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.friend-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    width: 90%; /* Ensure cards don't stretch too much */
+}
+
+.friend-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.friend-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.friend-card p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* --- Carousel Navigation and Pagination Styles --- */
+.swiper-pagination-bullet {
+    background: #4caf50;
+    opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #4caf50;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+
+    /* Center the buttons vertically */
+    top: 50%;
+    transform: translateY(-70%); /* Adjust to perfectly center on the cards */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(255,255,255,0.8);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* --- Responsive Adjustments for Friends Grid --- */
+/* For Tablets: 2 columns */
+@media (max-width: 768px) {
+    /* These styles are now handled by Swiper.js breakpoints */
+}
+/* For Phones: 1 column */
+@media (max-width: 600px) {
+    /* These styles are now handled by Swiper.js breakpoints */
+}
+

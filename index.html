@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <!-- 1. Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
     <div class="background-overlay"></div>
@@ -52,6 +54,62 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- Friends Section -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Friends' Websites</h2>
+                </div>
+                <div class="card-content">
+                    <p class="friends-caption">Check out some of my friends' cool websites!</p>
+
+                    <!-- 2. Carousel HTML Structure -->
+                    <div class="swiper-container friends-carousel">
+                        <div class="swiper-wrapper">
+                            <!-- Friend 1 -->
+                            <div class="swiper-slide">
+                        <a href="#" class="friend-card" title="Visit Friend's Site">
+                                    <img src="https://i.pravatar.cc/100?u=friend1" alt="Friend 1 Avatar">
+                                    <p>Friend One</p>
+                        </a>
+                            </div>
+                            <!-- Friend 2 -->
+                            <div class="swiper-slide">
+                                <a href="#" class="friend-card" title="Visit Friend's Site">
+                                    <img src="https://i.pravatar.cc/100?u=friend2" alt="Friend 2 Avatar">
+                                    <p>Friend Two</p>
+                                </a>
+                </div>
+                            <!-- Friend 3 -->
+                            <div class="swiper-slide">
+                                <a href="#" class="friend-card" title="Visit Friend's Site">
+                                    <img src="https://i.pravatar.cc/100?u=friend3" alt="Friend 3 Avatar">
+                                    <p>Friend Three</p>
+                                </a>
+            </div>
+                            <!-- Friend 4 -->
+                            <div class="swiper-slide">
+                                <a href="#" class="friend-card" title="Visit Friend's Site">
+                                    <img src="https://i.pravatar.cc/100?u=friend4" alt="Friend 4 Avatar">
+                                    <p>Friend Four</p>
+                                </a>
+    </div>
+                            <!-- Friend 5 -->
+                            <div class="swiper-slide">
+                                <a href="#" class="friend-card" title="Visit Friend's Site">
+                                    <img src="https://i.pravatar.cc/100?u=friend5" alt="Friend 5 Avatar">
+                                    <p>Friend Five</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer class="main-footer">
@@ -60,6 +118,44 @@
     </div>
     <a href="#" class="back-to-top">Back to Top</a>
     <script src="bubbles.js"></script>
+
+    <!-- 3. Swiper.js JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- 4. Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.friends-carousel', {
+            // How many slides to show at once
+            slidesPerView: 1,
+            spaceBetween: 10,
+
+            // Add pagination dots
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Add navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // Responsive breakpoints
+            breakpoints: {
+                // when window width is >= 600px
+                600: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            }
+        });
+    </script>
 </body>
 </html>
 
