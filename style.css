@@ -7,7 +7,7 @@ body {
     padding: 0;
 
     /* Set the new background image */
-    background-image: url('/asadal_stock_212.jpg');
+    background-image: '/asadal_stock_212.jpg';
 
     /* Ensure the background covers the entire page and stays fixed */
     background-size: cover;
