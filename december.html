@@ -3,55 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego's Personal Website - Green Frutiger Aero Style</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <title>Back to December</title>
+    <link rel="stylesheet" href="december.css">
 </head>
 <body>
-    <div class="background-overlay"></div>
-    <div class="container">
-        <header class="main-header">
-            <div class="logo-area">
-                <h1>The Inhaler's Website</h1>
-                <p class="subtitle">Sus</p>
-            </div>
-            <nav class="main-nav">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
 
-        <main class="content-area">
-            <div class="card">
-                <div class="card-header">
-                    <h2>About Me</h2>
-                </div>
-                <div class="card-content">
-                    <p>Hello! My name is Diego, and this website is my personal space on the internet. I am passionate about technology, design, and exploring the web.</p>
-                    <p>Here, you'll find a collection of my thoughts, projects, and things I find interesting. I was heavily inspired by the optimistic and clean aesthetic of the mid-2000s, and I wanted to recreate that feeling here.</p>
-                </div>
-            </div>
+    <div class="december-container">
+        <h1 class="title">Back to December</h1>
+        <p class="subtitle">"I go back to December all the time."</p>
+        
+        <div class="lyrics">
+            <p>The air is cold and crisp, a reminder of that winter night.</p>
+            <p>Streetlights glow, casting a soft purple hue on the fresh snow.</p>
+        </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <h2>About This Website</h2>
-                </div>
-                <div class="card-content">
-                    <p>This website is a tribute to the <strong>Frutiger Aero</strong> design style, which was popular from roughly 2004 to 2013. It's known for its glossy textures, skeuomorphic details, and heavy use of nature imagery.</p>
-                    <p>The goal was to create a corner of the web that feels bright, optimistic, and human-centric, as a contrast to the flat, minimalist design that is common today. Everything here, from the colors to the glassy buttons, was designed to evoke that specific feeling of early digital wonder.</p>
-                </div>
-            </div>
-        </main>
-        <footer class="main-footer">
-            <p>&copy; 2025 Diego's Personal Website. All rights reserved.</p>
-        </footer>
+        <hr class="separator">
+
+        <div class="lyrics">
+            <p>This is for the one who showed me that some seasons have their own beautiful, quiet magic.</p>
+        </div>
+
+        <a href="index.html" class="home-link">Return to Homepage</a>
     </div>
-    <a href="#" class="back-to-top">Back to Top</a>
-    <script src="bubbles.js"></script>
+
+    <script>
+        // JavaScript for the falling snowflake effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const snowflakeCount = 50;
+            const body = document.body;
+
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.textContent = '❄';
+                
+                // Randomize position, animation delay, and size
+                snowflake.style.left = `${Math.random() * 100}vw`;
+                snowflake.style.animationDuration = `${Math.random() * 10 + 5}s`; // 5 to 15 seconds
+                snowflake.style.animationDelay = `${Math.random() * 5}s`;
+                snowflake.style.fontSize = `${Math.random() * 1 + 0.5}em`; // 0.5em to 1.5em
+
+                body.appendChild(snowflake);
+            }
+        });
+    </script>
+
 </body>
 </html>
-

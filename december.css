@@ -1,7 +1,101 @@
-/* Styles for the December page */
+/*
+  Theme: Back to December (Taylor Swift)
+  Colors: Purple, Silver, White
+  Atmosphere: Snowy, Elegant, Christmasy
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;600&display=swap');
 
 body {
-    background-color: #e0f7fa; /* A light, wintery blue */
-    font-family: sans-serif;
-    color: #333;
+    background-color: #2e2a40; /* Deep purple night sky */
+    background: linear-gradient(to bottom, #2e2a40, #4c436b);
+    font-family: 'Lora', serif;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.december-container {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(220, 180, 255, 0.7);
+    margin: 0 0 20px 0;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #c5b8e9;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.lyrics {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #dcdcdc;
+}
+
+.lyrics p {
+    margin: 20px 0;
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    margin: 40px 0;
+}
+
+.home-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    background: linear-gradient(to bottom, #8a7ac4, #6a5a9e);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.home-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Snowflake animation for background effect */
+@keyframes fall {
+  0% { transform: translateY(-100px); opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.snowflake {
+  position: fixed;
+  top: 0;
+  color: white;
+  font-size: 1.5em;
+  pointer-events: none;
+  animation: fall linear infinite;
+  z-index: -1;
 }
