@@ -6,6 +6,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;600&display=swap');
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #2e2a40; /* Deep purple night sky */
     background: linear-gradient(to bottom, #2e2a40, #4c436b);
@@ -15,8 +23,9 @@ body {
     padding: 40px 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .december-container {
@@ -98,4 +107,27 @@ body {
   pointer-events: none;
   animation: fall linear infinite;
   z-index: -1;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    .december-container {
+        padding: 25px 20px;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .lyrics {
+        font-size: 1em;
+    }
 }

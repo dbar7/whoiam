@@ -1,10 +1,19 @@
 /* Frutiger Aero - Green/Blue Theme */
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    /* Prevent horizontal scrollbars from any full-bleed/decorative elements */
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
     color: #122;
     margin: 0;
-    padding: 0;
+    padding: 40px 0;
 
     /* Set the new background image */
     /* Ensure the background covers the entire page and stays fixed */
@@ -15,10 +24,10 @@ body {
 
     /* A fallback color in case the image doesn't load */
     background-color: #d1f7ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* Note: block layout (not flex) avoids mobile browsers clipping the
+       top of content that's taller than the viewport when centered */
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* --- Responsive Adjustments for Friends Grid --- */
@@ -93,7 +102,7 @@ body {
 .container {
     width: 85%;
     max-width: 900px;
-    margin: 40px auto;
+    margin: 0 auto;
     padding: 20px;
     /* Enhanced Glass Effect */
     background: rgba(255, 255, 255, 0.55);
@@ -405,6 +414,54 @@ body {
         padding: 8px 16px;
         bottom: 15px;
         right: 15px;
+    }
+
+    .main-nav a {
+        margin: 0;
+        padding: 6px 12px;
+        font-size: 1em;
+    }
+
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.5em;
+        margin: 5px 8px;
+    }
+
+    .submit-button {
+        align-self: stretch;
+        text-align: center;
+    }
+}
+
+/* For Small Phones */
+@media (max-width: 400px) {
+    .logo-area h1 {
+        font-size: 1.3em;
+    }
+
+    .logo-area .subtitle {
+        font-size: 0.9em;
+    }
+
+    .card-content {
+        padding: 12px;
+    }
+
+    .card-content p,
+    .card-content li {
+        font-size: 0.95em;
+    }
+
+    .friend-card {
+        padding: 12px;
+    }
+
+    .friend-card img {
+        width: 64px;
+        height: 64px;
     }
 }
 
